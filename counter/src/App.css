@@ -1,12 +1,14 @@
 .counter {
+    margin-top: 200px;
     text-align: center;
-    width: 70px;
-    height: 80px;
+    width: 90px;
+    height: 60px;
     border-color: black;
-    background-color: darkorange;
+    background-color: cornflowerblue;
     border-width: 2px;
     border-style: solid;
     margin-left: 600px;
+
 }
 
 .buttonFive {
@@ -15,4 +17,8 @@
 
 .button {
     color: black;
+    padding: 5px;
+}
+.inline {
+    display: inline;
 }

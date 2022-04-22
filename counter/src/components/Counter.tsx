@@ -14,16 +14,18 @@ export function Counter(props: CounterPropsType) {
         <div className="counter">
             <div className={props.result === 5 ? 'buttonFive' : 'button'}>{props.result}</div>
             <div>
-                <button onClick={() => {
-                    props.plusOneFN(props.result)
-                }}>+
-                </button>
-            </div>
-            <div>
-                <button onClick={() => {
-                    props.dropToZero(props.result)
-                }}>reset
-                </button>
+               <span className='inline'>
+                   <button onClick={() => {
+                       props.plusOneFN(props.result)
+                   }}>+1
+                   </button>
+               </span>
+                <span>
+                    <button onClick={() => {
+                        props.dropToZero(props.result)
+                    }}>reset
+                    </button>
+               </span>
             </div>
         </div>
     )
