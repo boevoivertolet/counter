@@ -4,16 +4,19 @@ import {Counter} from './components/Counter';
 
 
 function App() {
-    let [result, setResult] = useState(0)
+let maxNumber = 5;
+let minNumber = 0;
+
+    let [result, setResult] = useState<number>(minNumber)
 
     function plusOneFN(result: number) {
         let newResult = result + 1
-        if (result < 5)
+        if (result < maxNumber)
             setResult(newResult);
     }
 
     function dropToZero() {
-        setResult(0)
+        setResult(minNumber)
     }
 
     return (
@@ -21,7 +24,11 @@ function App() {
             <Counter
                 plusOneFN={plusOneFN}
                 dropToZero={dropToZero}
-                result={result}/>
+                result={result}
+                maxNumber={maxNumber}
+                minNumber={minNumber}
+
+            />
         </div>
     );
 }
