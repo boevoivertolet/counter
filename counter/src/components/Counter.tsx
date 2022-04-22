@@ -23,7 +23,7 @@ export function Counter(props: CounterPropsType) {
                    </button>
                </span>
                 <span>
-                    <button disabled={props.result !== props.maxNumber} onClick={() => {
+                    <button disabled={props.result === props.minNumber } onClick={() => {
                         props.dropToZero(props.result)
                     }}>reset
                     </button>
